@@ -1,0 +1,481 @@
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none !important;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: rgb(52, 114, 17);
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-link,
+.user-name {
+  color: #fff;
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover,
+.user-name:hover {
+  text-decoration: none !important; /* Prevent underline on hover */
+}
+
+
+/* Table styles */
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid rgba(214, 214, 214, 0.4); 
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Button styles */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.btn-primary {
+  color: #fff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 126 51 / var(--tw-bg-opacity));
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 126 51 / var(--tw-bg-opacity));
+  border-color: #0062cc;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Default styles */
+.organisation-fields {
+  margin-bottom: 20px;
+}
+
+.organisation-fields .col-12 {
+  margin-bottom: 10px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.asterisk_input {
+  color: rgb(0, 0, 0);
+}
+
+.p-icon {
+  display: inline-block;
+}
+
+/* Sticky Button */
+.sticky-btn {
+  position: fixed;
+  top: 80px; 
+  right: 210px; 
+  z-index: 1000;
+}
+
+.sticky-btn a {
+  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
+}
+
+@media (max-width: 576px) {
+  .sticky-btn {
+    top: 10px;
+    right: 10px; 
+  }
+}
+
+/* Gradient background */
+.bg-green-gradient {
+  background: #347211;
+  color: white;
+}
+
+.bg-green-gradient .a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Rounded pill */
+.rounded-pill {
+  border-radius: 50px;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+/* Plus icon */
+.plus-icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* Footer background */
+.footer-bg {
+  background-color: rgb(87, 152, 213);
+  color: #fff;
+}
+
+/* Padding for footer */
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Navbar brand image for small screens */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 120px;
+  }
+
+  .nav-link {
+    margin-right: 10px;
+  }
+
+  .user-name {
+    margin-right: 10px;
+  }
+}
+
+/* Container styles */
+.container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+/* Center align text */
+.text-center {
+  text-align: center;
+  color: black;
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(87, 152, 213);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Green button */
+.btn-green {
+  background-color: green;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-green:hover {
+  background-color: darkgreen;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Invalid feedback */
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: -0.75rem;
+  font-size: 100%;
+  color: #dc3545;
+  line-height: 1.334re;
+  text-align: end;
+}
+
+/* Dialog header */
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Save button */
+.save {
+  background-color: green;
+}
+
+/* Table container margin top */
+.table-container {
+  margin-top: 5rem !important;
+}
+
+/* Responsive adjustments */
+.container-fluid {
+  background: linear-gradient(to right bottom, #26a69a, #00796b);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login container */
+.login-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form control */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Text center */
+.text-center {
+  text-align: center;
+}
+
+/* Additional Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+/* Custom width adjustment for desktop */
+@media (min-width: 992px) {
+  .login-container {
+    width: 60%; /* Adjust width as needed */
+  }
+}
+
+/* Additional Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .login-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+.actions .btn {
+  font-size: 16px;
+  border: 1px solid #28a745; /* Green border color */
+  border-radius: 6px;
+  color: #28a745 !important; /* Green color */
+}
+
+.actions .edit-btn {
+  margin-right: 5px; /* Adjust the space between buttons */
+}
+a.router-link {
+  text-decoration: none; /* Remove underline */
+}
+.actions .btn:hover {
+  background-color: #28a745; /* Green background color on hover */
+  color: #fff !important; /* White text color on hover */
+}
+
+.actions .delete-btn:hover {
+  background-color: #dc3545; /* Red background color on hover */
+  color: #fff !important; /* White text color on hover */
+}
+
+
+.p-dialog .p-dialog-content {
+  background: #FFFFFF !important;
+  color: var(--bs-modal-color) !important;
+}
+
+.p-dialog-header {
+  background: #FFFFFF !important;
+  color: var(--bs-modal-color) !important;
+}
+
+.p-dialog-title {
+  color: var(--color-primary);
+}

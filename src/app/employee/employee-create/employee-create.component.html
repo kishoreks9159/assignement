@@ -1,0 +1,59 @@
+<form [formGroup]="detailForm">
+    <div class="row organisation-fields">
+        <h4></h4>
+        <div class="col-12 col-lg-4 col-md-6">
+            <label><span class="asterisk_input">Name:</span>
+                <input type="text" class="form-control text-input" placeholder="Please Enter name"
+                    formControlName="name" [ngClass]="{
+                'is-invalid': detailForm.get('name').invalid && (detailForm.get('name').dirty || detailForm.get('name').touched),
+                }">
+                <div class="invalid-feedback"
+                    *ngIf="detailForm.get('name').invalid && (detailForm.get('name').dirty || detailForm.get('name').touched)">
+                    <span *ngIf="detailForm.get('name').errors?.required">
+                        Please Enter Name
+                    </span>
+                </div>
+            </label>
+        </div>
+
+        <div class="col-12 col-lg-4 col-md-6">
+            <label><span class="asterisk_input">Age:</span>
+                <input type="number" class="form-control text-input" placeholder="Please Enter age"
+                    formControlName="age" [ngClass]="{
+                'is-invalid': detailForm.get('age').invalid && (detailForm.get('age').dirty || detailForm.get('age').touched),
+                }">
+                <div class="invalid-feedback"
+                    *ngIf="detailForm.get('age').invalid && (detailForm.get('age').dirty || detailForm.get('age').touched)">
+                    <span *ngIf="detailForm.get('age').errors?.required">
+                        Please Enter Age
+                    </span>
+                </div>
+            </label>
+        </div>
+
+        <div class="col-12 col-lg-4 col-md-6">
+            <label><span class="asterisk_input">Colour:</span>
+                <input type="text" class="form-control text-input" placeholder="Please Enter Colour"
+                    formControlName="colour" [ngClass]="{
+                'is-invalid': detailForm.get('colour').invalid && (detailForm.get('colour').dirty || detailForm.get('colour').touched),
+                }">
+                <div class="invalid-feedback"
+                    *ngIf="detailForm.get('colour').invalid && (detailForm.get('colour').dirty || detailForm.get('colour').touched)">
+                    <span *ngIf="detailForm.get('colour').errors?.required">
+                        Please Enter Colour
+                    </span>
+                </div>
+            </label>
+        </div>
+
+    </div>
+
+</form>
+
+<div class="d-flex justify-content-end mr-5">
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button class="btn btn-sty1" type="button" (click)="onCancel()">Cancel</button>
+        <button type="button" (click)="onSave()" class="btn btn-primary btn-block" [disabled]="detailForm.invalid"
+            style="cursor: pointer;margin-left: 10px;">Save</button>
+    </div>
+</div>

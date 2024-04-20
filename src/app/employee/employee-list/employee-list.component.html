@@ -1,0 +1,46 @@
+<div class="sticky-btn">
+    <a class="bg-green-gradient rounded-pill p-2" (click)="addNeweditEmployeeCost('create')">Create New Client</a>
+</div>
+<div class="table-container">
+
+    <div class="container mt-5">
+        <p-table class="table table-bordered text-center table-striped table-hover" id="" [value]="employee_list"
+            [loading]="loading" [rows]="10" [paginator]="true" [totalRecords]="totalRecords">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Color</th>
+                    <th>Action</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-employee>
+                <tr>
+                    <td>{{ employee._id }}</td>
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.age }}</td>
+                    <td>{{ employee.colour }}</td>
+                    <td>
+                        <div class="actions">
+                            <a class="btn edit-btn" (click)="addNeweditEmployeeCost('edit',employee)">
+                                <i class="fa fa-edit fa-xs" title="Edit"></i>
+                            </a>
+                            <a class="btn delete-btn" (click)="deleteEmployee(employee._id)">
+                                <i class="fa fa-trash fa-xs" title="Archive"></i>
+                            </a>
+                        </div>
+                    </td>
+
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage">
+                <tr>
+                    <td colspan="5" class="text-center">No record found</td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+    </div>
+
+</div>
